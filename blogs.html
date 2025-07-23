@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Blog | Dariba Alhisab</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+    }
+    #vanta-bg {
+      position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: -1;
+    }
+    .blog-card {
+      background: rgba(0,0,0,0.6);
+      border: 1px solid rgba(255, 215, 0, 0.3);
+      border-radius: .75rem;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+    }
+    h1, h2, h3 {
+      color: #facc15;
+    }
+  </style>
+</head>
+<body class="bg-black">
+
+<!-- Preloader -->
+<div id="preloader" class="fixed inset-0 z-[9999] flex flex-col items-center justify-center text-white bg-[#000000]">
+  <div id="vanta-preloader" class="absolute inset-0 -z-10"></div>
+  <img src="images/logo.png" alt="Logo" class="w-20 h-20 mb-4 animate-bounce" />
+  <p class="text-yellow-300 text-xl font-semibold">Loading Dariba Alhisab...</p>
+</div>
+
+<div id="vanta-bg"></div>
+
+<!-- Header -->
+<header class="z-50 shadow-md px-6 py-4 flex justify-between items-center">
+  <img src="images/logo.png" alt="Dariba Alhisab Logo" class="h-20 w-auto bg-white p-1 rounded" />
+  <nav class="space-x-6 text-white">
+    <a href="index.html" class="hover:text-yellow-400">Home</a>
+    <a href="about.html" class="hover:text-yellow-400">About</a>
+    <a href="services.html" class="hover:text-yellow-400">Services</a>
+    <a href="blogs.html" class="text-yellow-400 font-bold">Blog</a>
+    <a href="contact.html" class="hover:text-yellow-400">Contact</a>
+  </nav>
+</header>
+
+<main class="px-6 py-20">
+  <h1 class="text-4xl font-bold text-center mb-12" data-aos="fade-down">Our Blog</h1>
+
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    
+    <!-- Blog Post 1 -->
+    <div class="blog-card" data-aos="fade-up">
+      <h3 class="text-xl font-semibold mb-2">Choosing the Right Accounting Firm in UAE</h3>
+      <p>Key factors you must consider before selecting a trusted financial partner in the UAE.</p>
+      <a href="#" class="text-yellow-400 hover:underline mt-2 inline-block">Read More →</a>
+    </div>
+
+    <!-- Blog Post 2 -->
+    <div class="blog-card" data-aos="fade-up" data-aos-delay="50">
+      <h3 class="text-xl font-semibold mb-2">5 VAT Compliance Mistakes to Avoid</h3>
+      <p>Simple errors that cost businesses thousands—learn how to stay compliant.</p>
+      <a href="#" class="text-yellow-400 hover:underline mt-2 inline-block">Read More →</a>
+    </div>
+
+    <!-- Blog Post 3 -->
+    <div class="blog-card" data-aos="fade-up" data-aos-delay="100">
+      <h3 class="text-xl font-semibold mb-2">Why You Need a Forensic Audit</h3>
+      <p>Fraud detection, asset tracing, and how forensic audits can safeguard your business.</p>
+      <a href="#" class="text-yellow-400 hover:underline mt-2 inline-block">Read More →</a>
+    </div>
+
+    <!-- Blog Post 4 -->
+    <div class="blog-card" data-aos="fade-up" data-aos-delay="150">
+      <h3 class="text-xl font-semibold mb-2">Understanding ESR in the UAE</h3>
+      <p>Everything about Economic Substance Regulations and how to remain compliant in 2025.</p>
+      <a href="#" class="text-yellow-400 hover:underline mt-2 inline-block">Read More →</a>
+    </div>
+
+    <!-- Blog Post 5 -->
+    <div class="blog-card" data-aos="fade-up" data-aos-delay="200">
+      <h3 class="text-xl font-semibold mb-2">Mainland vs Freezone Company Formation</h3>
+      <p>Which setup is better for your business? Legal differences, licensing, and more.</p>
+      <a href="#" class="text-yellow-400 hover:underline mt-2 inline-block">Read More →</a>
+    </div>
+
+    <!-- Blog Post 6 -->
+    <div class="blog-card" data-aos="fade-up" data-aos-delay="250">
+      <h3 class="text-xl font-semibold mb-2">Benefits of Outsourcing Your Accounting</h3>
+      <p>Save time, cost and stay focused by handing over finance operations to professionals.</p>
+      <a href="#" class="text-yellow-400 hover:underline mt-2 inline-block">Read More →</a>
+    </div>
+
+  </div>
+</main>
+
+<footer class="bg-black bg-opacity-90 text-center py-6 text-gray-400">
+  © 2025 Dariba Alhisab. All rights reserved.
+</footer>
+
+<!-- Scripts -->
+<script>
+  AOS.init();
+  VANTA.NET({
+    el: "#vanta-bg",
+    mouseControls: true,
+    touchControls: true,
+    minHeight: 200,
+    minWidth: 200,
+    scale: 1.0,
+    scaleMobile: 1.0,
+    color: 0xffd700,
+    backgroundColor: 0x0a0a0a,
+    points: 12,
+    maxDistance: 20,
+    spacing: 18
+  });
+</script>
+
+<!-- Vanta Preloader -->
+<script>
+  VANTA.NET({
+    el: "#vanta-preloader",
+    mouseControls: true,
+    touchControls: true,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.0,
+    scaleMobile: 1.0,
+    color: 0xffd700,
+    backgroundColor: 0x111a24,
+    points: 8.0,
+    maxDistance: 18.0
+  });
+
+  window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+    preloader.classList.add("opacity-0", "transition-opacity", "duration-700");
+    setTimeout(() => {
+      preloader.style.display = "none";
+    }, 700);
+  });
+</script>
+</body>
+</html>
